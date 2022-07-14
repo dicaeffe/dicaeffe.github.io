@@ -7,5 +7,6 @@ My Github pages repository. Just a POC.
 
 ## Notes area
 
-* [Prova grafici](/note/poc_graph.html)
+* [Pagina template](template.md)
+* [Prova grafici](poc_graph.html)
 * Durata media di un governo nel tempo
