@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+            // Load google charts
+            google.charts.load('current', {'packages':['corechart']});
+            google.charts.setOnLoadCallback(drawChart);
+
+            // Draw the chart and set the chart values
+            function drawChart() {
+                var data = google.visualization.arrayToDataTable([
+                ['Year', 'Sales', 'Expenses'],
+                ['2004',  1000,      400],
+                ['2005',  1170,      460],
+                ['2006',  660,       1120],
+                ['2007',  1030,      null]
+                ]);
+
+                // Optional: redraw the chart. Add a title and set the width and height of the chart
+                var options = {
+                    title: 'Company Performance',
+                    curveType: 'function',
+                    legend: { position: 'bottom' }
+                };
+
+                var chart = new google.visualization.LineChart(document.getElementById('linechart_div'));
+
+                chart.draw(data, options);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>--- Chart ---</h1>
+        <div id="linechart_div" style="width: 900px; height: 500px"></div>
+    </body>
+</html>

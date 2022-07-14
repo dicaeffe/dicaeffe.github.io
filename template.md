@@ -8,13 +8,13 @@ topics:
 shortTitle: This is the short title
 ---
 
-# First pagafraph
-
-# Second paragraph
+# The first paragraph
 
 ## A sub-paragraph
 
 This is a descriptive line
+
+# Another paragraph
 
 * bullet
 - bullet
