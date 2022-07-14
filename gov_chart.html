@@ -1,0 +1,207 @@
+<html>
+    <head>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+            // Load google charts
+            google.charts.load('current', {'packages':['corechart']});
+            google.charts.setOnLoadCallback(drawChart);
+
+            // Draw the chart and set the chart values
+            function drawChart() {
+                var data = google.visualization.arrayToDataTable([
+                ['Anno',           'Legislatura', 'Giorni in carica', 'Giorni effettivi', 'Media effettivi', 'Media nella Legislatura', 'Media II rep', 'Media 20 anni'],
+                ['De Gasperi II',   0,             203,                190,                190,               190,                       null,           null],
+                ['De Gasperi III',  0,             119,                100,                145,               145,                       null,           null],
+                ['De Gasperi IV',   0,             358,                346,                212,               212,                       null,           null],
+                ['De Gasperi V',    1,             613,                598,                308.5,             598,                       null,           null],
+                ['De Gasperi VI',   1,             545,                535,                353.8,             566.5,                     null,           null],
+                ['De Gasperi VII',  1,             721,                704,                412.1667,          612.3333,                  null,           null],
+                ['De Gasperi VIII', 2,              32,                 12,                355,                12,                       null,           null],
+                ['Pella I',         2,             155,                141,                328.25,             76.5,                     null,           null],
+                ['Fanfani I',       2,              22,                 11,                293,                54.66667,                 null,           null],
+                ['Scelba I',        2,             511,                497,                313.4,             165.25,                    null,           null],
+                ['Segni I',         2,             684,                670,                345.8182,          266.2,                     null,           null],
+                ['Zoli I',          2,             408,                395,                349.9167,          287.6667,                  null,           null],
+                ['Fanfani II',      3,             229,                208,                339,               208,                       null,           null],
+                ['Segni II',        3,             404,                373,                341.4286,          290.5,                     null,           null],
+                ['Tambroni I',      3,             123,                115,                326.3333,          232,                       null,           null],
+                ['Fanfani III',     3,             575,                555,                340.625,           312.75,                    null,           null],
+                ['Fanfani IV',      3,             485,                448,                346.9412,          339.8,                     null,           null],
+                ['Leone I',         4,             166,                136,                335.2222,          136,                       null,           null],
+                ['Moro I',          4,             231,                204,                328.3158,          170,                       null,           null],
+                ['Moro II',         4,             581,                547,                339.25,            295.6667,                  null,           null],
+                ['Moro III',        4,             852,                832,                362.7143,          429.75,                    null,           null],
+                ['Leone II',        5,             171,                147,                352.9091,          147,                       null,           null],
+                ['Rumor I',         5,             236,                204,                346.4348,          175.5,                     null,           null],
+                ['Rumor II',        5,             234,                185,                339.7083,          178.6667,                  null,           null],
+                ['Rumor III',       5,             131,                100,                330.12,            159,                       null,           null],
+                ['Colombo I',       5,             561,                527,                337.6923,          232.6,                     null,           null],
+                ['Andreotti I',     5,             129,                  8,                325.4815,          195.1667,                  null,           null],
+                ['Andreotti II',    6,             377,                351,                326.3929,          351,                       null,           null],
+                ['Rumor IV',        6,             250,                237,                323.3103,          294,                       null,           null],
+                ['Rumor V',         6,             253,                202,                319.2667,          263.3333,                  null,           null],
+                ['Moro IV',         6,             446,                410,                322.1935,          300,                       null,           null],
+                ['Moro V',          6,             169,                 78,                314.5625,          255.6,                     null,           null],
+                ['Andreotti III',   7,             591,                535,                321.2424,          535,                       null,           null],
+                ['Andreotti IV',    7,             373,                324,                321.3235,          429.5,                     null,           null],
+                ['Andreotti V',     7,             137,                 10,                312.4286,          289.6667,                  null,           null],
+                ['Cossiga I',       8,             243,                227,                310.0556,          227,                       null,           null],
+                ['Cossiga II',      8,             197,                177,                306.4595,          202,                       null,           null],
+                ['ForlanI',         8,             253,                220,                304.1842,          208,                       null,           null],
+                ['Spadolini I',     8,             421,                405,                306.7692,          257.25,                    null,           null],
+                ['Spadolini II',    8,             100,                 82,                301.15,            222.2,                     null,           null],
+                ['Fanfani V',       8,             246,                149,                297.439,           210,                       null,           null],
+                ['Craxi I',         9,            1093,               1058,                315.5476,         1058,                       null,           null],
+                ['Craxi II',        9,             260,                214,                313.186,           636,                       null,           null],
+                ['Fanfani VI',      9,             102,                 10,                306.2955,          427.3333,                  null,           null],
+                ['Goria I',         10,            259,                226,                304.5111,          226,                       null,           null],
+                ['De Mita I',       10,            466,                401,                306.6087,          313.5,                     null,           null],
+                ['Andreotti VI',    10,            629,                614,                313.1489,          413.6667,                  null,           null],
+                ['Andreotti VII',   10,            442,                377,                314.4792,          404.5,                     null,           null],
+                ['Amato I',         11,            305,                298,                314.1429,          298,                       null,           null],
+                ['Ciampi I',        11,            377,                259,                313.04,            278.5,                     null,           null],
+                ['Berlusconi I',    12,            251,                225,                311.3137,          225,                       225,            null],
+                ['Dini I',          12,            487,                359,                312.2308,          292,                       292,            null],
+                ['Prodi I',         13,            886,                874,                322.8302,          874,                       486,            null],
+                ['D\'Alema I',      13,            427,                423,                324.6852,          648.5,                     470.25,         null],
+                ['D\'Alema II',     13,            126,                119,                320.9455,          472,                       400,            null],
+                ['Amato II',        13,            411,                400,                322.3571,          454,                       400,            null],
+                ['Berlusconi II',   14,           1412,               1409,                341.4211,         1409,                       544.1426,       null],
+                ['Berlusconi III',  14,            389,                374,                341.9828,          891.5,                     522.875,        null],
+                ['Prodi II',        15,            722,                617,                346.6441,          617,                       533.333,        null],
+                ['Berlusconi IV',   16,           1287,               1283,                362.25,           1283,                       608.3,          null],
+                ['Monti I',         16,            529,                401,                362.8852,          842,                       589.4545,       401],
+                ['Letta I',         17,            300,                292,                361.7419,          292,                       564.6667,       346.5],
+                ['Renzi I',         17,           1024,               1019,                372.1746,          655.5,                     599.6154,       570.6667],
+                ['Gentiloni I',     17,            536,                467,                373.6563,          592.6667,                  590.1429,       544.75],
+                ['Conte I',         18,            461,                445,                374.7538,          445,                       580.4667,       524.8],
+                ['Conte II',        18,            527,                509,                376.7879,          477,                       576,            522.1667],
+                ['Draghi I',        18,            516,                516,                378.8657,          490,                       572.4706,       521.2857]
+                ]);
+
+                // Optional: redraw the chart. Add a title and set the width and height of the chart
+                var options = {
+                    title: 'Durata dei Governi Repubblicani in giorni',
+                    vAxis : {
+                        title: 'Durata (giorni)'
+                    },
+                    hAxis : {
+		                title : 'Gorverni',
+                        viewWindow : 10
+		            },
+                    width : 1500,
+                    legend : {position : 'right'}
+                };
+
+                var chart = new google.visualization.LineChart(document.getElementById('linechart_div'));
+
+                chart.draw(data, options);
+
+                var showVal = new Object();
+
+                // Select the series to show
+                document.getElementById("showAll").onclick = function() {
+                    showVal = new Object();
+                    view = data;
+                    chart.draw(view, options);
+                }
+                document.getElementById("showDays").onclick = function() {
+                    showVal[2] = false;
+                    dataSetup(showVal, data, chart, options);
+                }
+                document.getElementById("showDaysEff").onclick = function() {
+                    showVal[3] = false;
+                    dataSetup(showVal, data, chart, options);
+                }
+                document.getElementById("showAverageEff").onclick = function() {
+                    showVal[4] = false;
+                    dataSetup(showVal, data, chart, options);
+                }
+                document.getElementById("showAverageLeg").onclick = function() {
+                    showVal[5] = false;
+                    dataSetup(showVal, data, chart, options);
+                }
+                document.getElementById("showAverages").onclick = function() {
+                    showVal[4] = false;
+                    showVal[5] = false;
+                    showVal[6] = false;
+                    showVal[7] = false;
+                    dataSetup(showVal, data, chart, options);
+                }
+                // Select the series to hide
+                document.getElementById("hideLegislatura").onclick = function() {
+                    showVal[1] = true;
+                    dataSetup(showVal, data, chart, options);
+                }
+                document.getElementById("hideDays").onclick = function() {
+                    showVal[2] = true;
+                    dataSetup(showVal, data, chart, options);
+                }
+                document.getElementById("hideDaysEff").onclick = function() {
+                    showVal[3] = true;
+                    dataSetup(showVal, data, chart, options);
+                }
+                document.getElementById("hideAverageEff").onclick = function() {
+                    showVal[4] = true;
+                    dataSetup(showVal, data, chart, options);
+                }
+                document.getElementById("hideAverageLeg").onclick = function() {
+                    showVal[5] = true;
+                    dataSetup(showVal, data, chart, options);
+                }
+                document.getElementById("hideAverages").onclick = function() {
+                    showVal[4] = true;
+                    showVal[5] = true;
+                    showVal[6] = true;
+                    showVal[7] = true;
+                    dataSetup(showVal, data, chart, options);
+                }
+
+            }
+            function dataSetup(showVal, data, chart, options) {
+                var hideArray = new Array();
+                for (const key in showVal) {
+                    if (showVal[key]) {
+                        hideArray.push(parseInt(key));
+                    }
+                }
+                view = new google.visualization.DataView(data);
+                console.log(hideArray);
+                view.hideColumns(hideArray);
+                chart.draw(view, options);
+            }
+        </script>
+    </head>
+    <body>
+        <!-- Chart --->
+        <div id="linechart_div" style="width: 900px; height: 500px"></div>
+        
+        <!-- Button for series selection -->
+        <table>
+            <tbody>
+                <tr>
+                    <td colspan="4">Rimuovi</td>
+                </tr>
+                <tr>
+                    <td><button type="button" id="hideLegislatura">Legislatura</button></td>
+                    <td><button type="button" id="hideDays">Giorni in carica</button></td>
+                    <td><button type="button" id="hideDaysEff">Giorni effettivi</button></td>
+                    <td><button type="button" id="hideAverageEff">Media effettivi</button></td>
+                    <td><button type="button" id="hideAverageLeg">Media Legislatura</button></td>
+                    <td><button type="button" id="hideAverages">Medie</button></td>
+                </tr>
+                <tr>
+                    <td colspan="4">Ripristina</td>
+                </tr>
+                <tr>
+                    <td><button type="button" id="showAll">Tutto</button></td>
+                    <td><button type="button" id="showDays">Giorni in carica</button></td>
+                    <td><button type="button" id="showDaysEff">Giorni effettivi</button></td>
+                    <td><button type="button" id="showAverageEff">Media effettivi</button></td>
+                    <td><button type="button" id="showAverageLeg">Media Legislatura</button></td>
+                    <td><button type="button" id="showAverages">Medie</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
