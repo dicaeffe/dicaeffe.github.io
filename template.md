@@ -8,7 +8,7 @@ topics:
 shortTitle: This is the short title
 ---
 
-# First pagafraph
+# First paragraph
 
 # Second paragraph
 
