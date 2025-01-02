@@ -1,207 +1,814 @@
 <html>
-    <head>
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <script type="text/javascript">
-            // Load google charts
-            google.charts.load('current', {'packages':['corechart']});
-            google.charts.setOnLoadCallback(drawChart);
+  <head>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      // Load google charts
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawChart);
 
-            // Draw the chart and set the chart values
-            function drawChart() {
-                var data = google.visualization.arrayToDataTable([
-                ['Anno',           'Legislatura', 'Giorni in carica', 'Giorni effettivi', 'Media effettivi', 'Media nella Legislatura', 'Media II rep', 'Media 20 anni'],
-                ['De Gasperi II',   0,             203,                190,                190,               190,                       null,           null],
-                ['De Gasperi III',  0,             119,                100,                145,               145,                       null,           null],
-                ['De Gasperi IV',   0,             358,                346,                212,               212,                       null,           null],
-                ['De Gasperi V',    1,             613,                598,                308.5,             598,                       null,           null],
-                ['De Gasperi VI',   1,             545,                535,                353.8,             566.5,                     null,           null],
-                ['De Gasperi VII',  1,             721,                704,                412.1667,          612.3333,                  null,           null],
-                ['De Gasperi VIII', 2,              32,                 12,                355,                12,                       null,           null],
-                ['Pella I',         2,             155,                141,                328.25,             76.5,                     null,           null],
-                ['Fanfani I',       2,              22,                 11,                293,                54.66667,                 null,           null],
-                ['Scelba I',        2,             511,                497,                313.4,             165.25,                    null,           null],
-                ['Segni I',         2,             684,                670,                345.8182,          266.2,                     null,           null],
-                ['Zoli I',          2,             408,                395,                349.9167,          287.6667,                  null,           null],
-                ['Fanfani II',      3,             229,                208,                339,               208,                       null,           null],
-                ['Segni II',        3,             404,                373,                341.4286,          290.5,                     null,           null],
-                ['Tambroni I',      3,             123,                115,                326.3333,          232,                       null,           null],
-                ['Fanfani III',     3,             575,                555,                340.625,           312.75,                    null,           null],
-                ['Fanfani IV',      3,             485,                448,                346.9412,          339.8,                     null,           null],
-                ['Leone I',         4,             166,                136,                335.2222,          136,                       null,           null],
-                ['Moro I',          4,             231,                204,                328.3158,          170,                       null,           null],
-                ['Moro II',         4,             581,                547,                339.25,            295.6667,                  null,           null],
-                ['Moro III',        4,             852,                832,                362.7143,          429.75,                    null,           null],
-                ['Leone II',        5,             171,                147,                352.9091,          147,                       null,           null],
-                ['Rumor I',         5,             236,                204,                346.4348,          175.5,                     null,           null],
-                ['Rumor II',        5,             234,                185,                339.7083,          178.6667,                  null,           null],
-                ['Rumor III',       5,             131,                100,                330.12,            159,                       null,           null],
-                ['Colombo I',       5,             561,                527,                337.6923,          232.6,                     null,           null],
-                ['Andreotti I',     5,             129,                  8,                325.4815,          195.1667,                  null,           null],
-                ['Andreotti II',    6,             377,                351,                326.3929,          351,                       null,           null],
-                ['Rumor IV',        6,             250,                237,                323.3103,          294,                       null,           null],
-                ['Rumor V',         6,             253,                202,                319.2667,          263.3333,                  null,           null],
-                ['Moro IV',         6,             446,                410,                322.1935,          300,                       null,           null],
-                ['Moro V',          6,             169,                 78,                314.5625,          255.6,                     null,           null],
-                ['Andreotti III',   7,             591,                535,                321.2424,          535,                       null,           null],
-                ['Andreotti IV',    7,             373,                324,                321.3235,          429.5,                     null,           null],
-                ['Andreotti V',     7,             137,                 10,                312.4286,          289.6667,                  null,           null],
-                ['Cossiga I',       8,             243,                227,                310.0556,          227,                       null,           null],
-                ['Cossiga II',      8,             197,                177,                306.4595,          202,                       null,           null],
-                ['ForlanI',         8,             253,                220,                304.1842,          208,                       null,           null],
-                ['Spadolini I',     8,             421,                405,                306.7692,          257.25,                    null,           null],
-                ['Spadolini II',    8,             100,                 82,                301.15,            222.2,                     null,           null],
-                ['Fanfani V',       8,             246,                149,                297.439,           210,                       null,           null],
-                ['Craxi I',         9,            1093,               1058,                315.5476,         1058,                       null,           null],
-                ['Craxi II',        9,             260,                214,                313.186,           636,                       null,           null],
-                ['Fanfani VI',      9,             102,                 10,                306.2955,          427.3333,                  null,           null],
-                ['Goria I',         10,            259,                226,                304.5111,          226,                       null,           null],
-                ['De Mita I',       10,            466,                401,                306.6087,          313.5,                     null,           null],
-                ['Andreotti VI',    10,            629,                614,                313.1489,          413.6667,                  null,           null],
-                ['Andreotti VII',   10,            442,                377,                314.4792,          404.5,                     null,           null],
-                ['Amato I',         11,            305,                298,                314.1429,          298,                       null,           null],
-                ['Ciampi I',        11,            377,                259,                313.04,            278.5,                     null,           null],
-                ['Berlusconi I',    12,            251,                225,                311.3137,          225,                       225,            null],
-                ['Dini I',          12,            487,                359,                312.2308,          292,                       292,            null],
-                ['Prodi I',         13,            886,                874,                322.8302,          874,                       486,            null],
-                ['D\'Alema I',      13,            427,                423,                324.6852,          648.5,                     470.25,         null],
-                ['D\'Alema II',     13,            126,                119,                320.9455,          472,                       400,            null],
-                ['Amato II',        13,            411,                400,                322.3571,          454,                       400,            null],
-                ['Berlusconi II',   14,           1412,               1409,                341.4211,         1409,                       544.1426,       null],
-                ['Berlusconi III',  14,            389,                374,                341.9828,          891.5,                     522.875,        null],
-                ['Prodi II',        15,            722,                617,                346.6441,          617,                       533.333,        null],
-                ['Berlusconi IV',   16,           1287,               1283,                362.25,           1283,                       608.3,          null],
-                ['Monti I',         16,            529,                401,                362.8852,          842,                       589.4545,       401],
-                ['Letta I',         17,            300,                292,                361.7419,          292,                       564.6667,       346.5],
-                ['Renzi I',         17,           1024,               1019,                372.1746,          655.5,                     599.6154,       570.6667],
-                ['Gentiloni I',     17,            536,                467,                373.6563,          592.6667,                  590.1429,       544.75],
-                ['Conte I',         18,            461,                445,                374.7538,          445,                       580.4667,       524.8],
-                ['Conte II',        18,            527,                509,                376.7879,          477,                       576,            522.1667],
-                ['Draghi I',        18,            516,                516,                378.8657,          490,                       572.4706,       521.2857]
-                ]);
+      function getDate(stringDate) {
+        // format YYYY-MM-DD
+        if (stringDate) {
+          var array = stringDate.split("-");
+          return new Date(array[0], array[1] - 1, array[2]);
+        }
+        return new Date();
+      }
+      function daysBetween(startDate, finishDate) {
+        return (
+          Math.round(
+            (getDate(finishDate) - getDate(startDate)) / (1000 * 60 * 60 * 24)
+          ) - 1
+        );
+      }
+      function diffLessThanYrs(years, firstDate, secondDate) {
+        return daysBetween(firstDate, secondDate) < years * 365;
+      }
+      function isFirstRepublic(gov) {
+        return gov.id <= 50;
+      }
+      function meanRepVersion(gov, firstDayFirstRep, firstDaySecondRep) {
+        return isFirstRepublic(gov)
+          ? daysBetween(firstDayFirstRep, gov.fine) / gov.id
+          : daysBetween(firstDaySecondRep, gov.fine) / (gov.id - 50);
+      }
+      function meanLegislatura(refGov, governments) {
+        var govCount = 0;
+        for (var i = 0; i < governments.length; i++) {
+          if (governments[i].legislatura == refGov.legislatura) {
+            govCount++;
+          }
+        }
+        const firstGov = governments.find(
+          (element) => element.legislatura == refGov.legislatura
+        );
+        const lastGov = governments.findLast(
+          (element) => element.legislatura == refGov.legislatura
+        );
+        return daysBetween(firstGov.inizio, lastGov.fine) / govCount;
+      }
+      function mobileMean(years, refGov, governments) {
+        const firstGov = governments.find((element) =>
+          diffLessThanYrs(years, element.inizio, refGov.fine)
+        );
+        var govCount = 0;
+        for (var i = 0; i < governments.length; i++) {
+          if (
+            governments[i].id >= firstGov.id &&
+            governments[i].id <= refGov.id
+          ) {
+            govCount++;
+          }
+        }
+        return daysBetween(firstGov.inizio, refGov.fine) / govCount;
+        /*var count = 0;
+                const sum = governments.reduce((partialSum, g) => {
+                    count++;
+                    return diffLessThanYrs(years, g.inizio, refGov.fine) ? partialSum + daysBetween(g.inizio, g.fine) : partialSum
+                }, 0);
+                return sum/count;*/
+      }
+      function median(array) {
+        if (array.length === 0) {
+          throw new Error("Input array is empty");
+        }
+        array = [...array].sort((a, b) => a - b);
+        const half = Math.floor(array.length / 2);
+        return values.length % 2
+          ? array[half]
+          : (array[half - 1] + array[half]) / 2;
+      }
+      var governments = [
+        {
+          id: 1,
+          nome: "De Gasperi II",
+          legislatura: 0,
+          inizio: "1946-07-14",
+          dimissioni: "1947-01-20",
+          fine: "1947-02-02",
+        },
+        {
+          id: 2,
+          nome: "De Gasperi III",
+          legislatura: 0,
+          inizio: "1947-02-02",
+          dimissioni: "1947-05-13",
+          fine: "1947-06-01",
+        },
+        {
+          id: 3,
+          nome: "De Gasperi IV",
+          legislatura: 0,
+          inizio: "1947-06-01",
+          dimissioni: "1948-05-12",
+          fine: "1948-05-24",
+        },
+        {
+          id: 4,
+          nome: "De Gasperi V",
+          legislatura: 1,
+          inizio: "1948-05-24",
+          dimissioni: "1950-01-12",
+          fine: "1950-01-27",
+        },
+        {
+          id: 5,
+          nome: "De Gasperi VI",
+          legislatura: 1,
+          inizio: "1950-01-27",
+          dimissioni: "1951-07-16",
+          fine: "1951-07-26",
+        },
+        {
+          id: 6,
+          nome: "De Gasperi VII",
+          legislatura: 1,
+          inizio: "1951-07-26",
+          dimissioni: "1953-06-29",
+          fine: "1953-07-16",
+        },
+        {
+          id: 7,
+          nome: "De Gasperi VIII",
+          legislatura: 2,
+          inizio: "1953-07-16",
+          dimissioni: "1953-07-28",
+          fine: "1953-08-17",
+        },
+        {
+          id: 8,
+          nome: "Pella I",
+          legislatura: 2,
+          inizio: "1953-08-17",
+          dimissioni: "1954-01-05",
+          fine: "1954-01-19",
+        },
+        {
+          id: 9,
+          nome: "Fanfani I",
+          legislatura: 2,
+          inizio: "1954-01-19",
+          dimissioni: "1954-02-30",
+          fine: "1954-02-10",
+        },
+        {
+          id: 10,
+          nome: "Scelba I",
+          legislatura: 2,
+          inizio: "1954-02-10",
+          dimissioni: "1955-06-22",
+          fine: "1955-07-06",
+        },
+        {
+          id: 11,
+          nome: "Segni I",
+          legislatura: 2,
+          inizio: "1955-07-06",
+          dimissioni: "1957-05-06",
+          fine: "1957-05-20",
+        },
+        {
+          id: 12,
+          nome: "Zoli I",
+          legislatura: 2,
+          inizio: "1957-05-20",
+          dimissioni: "1958-06-19",
+          fine: "1958-07-02",
+        },
+        {
+          id: 13,
+          nome: "Fanfani II",
+          legislatura: 3,
+          inizio: "1958-07-02",
+          dimissioni: "1959-01-26",
+          fine: "1959-02-16",
+        },
+        {
+          id: 14,
+          nome: "Segni II",
+          legislatura: 3,
+          inizio: "1959-02-16",
+          dimissioni: "1960-02-24",
+          fine: "1960-03-26",
+        },
+        {
+          id: 15,
+          nome: "Tambroni I",
+          legislatura: 3,
+          inizio: "1960-03-26",
+          dimissioni: "1960-07-19",
+          fine: "1960-07-27",
+        },
+        {
+          id: 16,
+          nome: "Fanfani III",
+          legislatura: 3,
+          inizio: "1960-07-27",
+          dimissioni: "1962-02-02",
+          fine: "1962-02-22",
+        },
+        {
+          id: 17,
+          nome: "Fanfani IV",
+          legislatura: 3,
+          inizio: "1962-02-22",
+          dimissioni: "1963-05-16",
+          fine: "1963-06-22",
+        },
+        {
+          id: 18,
+          nome: "Leone I",
+          legislatura: 4,
+          inizio: "1963-06-22",
+          dimissioni: "1963-11-05",
+          fine: "1963-12-05",
+        },
+        {
+          id: 19,
+          nome: "Moro I",
+          legislatura: 4,
+          inizio: "1963-12-05",
+          dimissioni: "1964-06-26",
+          fine: "1964-07-23",
+        },
+        {
+          id: 20,
+          nome: "Moro II",
+          legislatura: 4,
+          inizio: "1964-07-23",
+          dimissioni: "1966-01-21",
+          fine: "1966-02-24",
+        },
+        {
+          id: 21,
+          nome: "Moro III",
+          legislatura: 4,
+          inizio: "1966-02-24",
+          dimissioni: "1968-06-05",
+          fine: "1968-06-25",
+        },
+        {
+          id: 22,
+          nome: "Leone I",
+          legislatura: 5,
+          inizio: "1968-06-25",
+          dimissioni: "1968-11-19",
+          fine: "1968-12-13",
+        },
+        {
+          id: 23,
+          nome: "Rumor I",
+          legislatura: 5,
+          inizio: "1968-12-13",
+          dimissioni: "1969-07-05",
+          fine: "1969-08-06",
+        },
+        {
+          id: 24,
+          nome: "Rumor II",
+          legislatura: 5,
+          inizio: "1969-08-06",
+          dimissioni: "1970-02-07",
+          fine: "1970-03-28",
+        },
+        {
+          id: 25,
+          nome: "Rumor III",
+          legislatura: 5,
+          inizio: "1970-03-28",
+          dimissioni: "1970-07-06",
+          fine: "1970-08-06",
+        },
+        {
+          id: 26,
+          nome: "Colombo I",
+          legislatura: 5,
+          inizio: "1970-08-06",
+          dimissioni: "1972-01-15",
+          fine: "1972-02-18",
+        },
+        {
+          id: 27,
+          nome: "Andreotti I",
+          legislatura: 5,
+          inizio: "1972-02-18",
+          dimissioni: "1972-02-26",
+          fine: "1972-06-26",
+        },
+        {
+          id: 28,
+          nome: "Andreotti II",
+          legislatura: 6,
+          inizio: "1972-06-26",
+          dimissioni: "1973-06-12",
+          fine: "1973-07-08",
+        },
+        {
+          id: 29,
+          nome: "Rumor IV",
+          legislatura: 6,
+          inizio: "1973-07-08",
+          dimissioni: "1974-03-02",
+          fine: "1974-03-15",
+        },
+        {
+          id: 30,
+          nome: "Rumor V",
+          legislatura: 6,
+          inizio: "1974-03-15",
+          dimissioni: "1974-10-03",
+          fine: "1974-11-23",
+        },
+        {
+          id: 31,
+          nome: "Moro IV",
+          legislatura: 6,
+          inizio: "1974-11-23",
+          dimissioni: "1976-01-07",
+          fine: "1976-02-12",
+        },
+        {
+          id: 32,
+          nome: "Moro V",
+          legislatura: 6,
+          inizio: "1976-02-12",
+          dimissioni: "1976-04-30",
+          fine: "1976-07-30",
+        },
+        {
+          id: 33,
+          nome: "Andreotti III",
+          legislatura: 7,
+          inizio: "1976-07-30",
+          dimissioni: "1978-01-16",
+          fine: "1978-03-13",
+        },
+        {
+          id: 34,
+          nome: "Andreotti IV",
+          legislatura: 7,
+          inizio: "1978-03-13",
+          dimissioni: "1979-01-31",
+          fine: "1979-03-21",
+        },
+        {
+          id: 35,
+          nome: "Andreotti V",
+          legislatura: 7,
+          inizio: "1979-03-21",
+          dimissioni: "1979-03-31",
+          fine: "1979-08-05",
+        },
+        {
+          id: 36,
+          nome: "Cossiga I",
+          legislatura: 8,
+          inizio: "1979-08-05",
+          dimissioni: "1980-03-19",
+          fine: "1980-04-04",
+        },
+        {
+          id: 37,
+          nome: "Cossiga II",
+          legislatura: 8,
+          inizio: "1980-04-04",
+          dimissioni: "1980-09-28",
+          fine: "1980-10-18",
+        },
+        {
+          id: 38,
+          nome: "Forlani I",
+          legislatura: 8,
+          inizio: "1980-10-18",
+          dimissioni: "1981-05-26",
+          fine: "1981-06-28",
+        },
+        {
+          id: 39,
+          nome: "Spadolini I",
+          legislatura: 8,
+          inizio: "1981-06-28",
+          dimissioni: "1982-08-07",
+          fine: "1982-08-23",
+        },
+        {
+          id: 40,
+          nome: "Spadolini II",
+          legislatura: 8,
+          inizio: "1982-08-23",
+          dimissioni: "1982-11-13",
+          fine: "1982-12-01",
+        },
+        {
+          id: 41,
+          nome: "Fanfani V",
+          legislatura: 8,
+          inizio: "1982-12-01",
+          dimissioni: "1983-04-29",
+          fine: "1983-08-04",
+        },
+        {
+          id: 42,
+          nome: "Craxi I",
+          legislatura: 9,
+          inizio: "1983-08-04",
+          dimissioni: "1986-06-27",
+          fine: "1986-08-01",
+        },
+        {
+          id: 43,
+          nome: "Craxi II",
+          legislatura: 9,
+          inizio: "1986-08-01",
+          dimissioni: "1987-03-01",
+          fine: "1987-04-18",
+        },
+        {
+          id: 44,
+          nome: "Fanfani VI",
+          legislatura: 9,
+          inizio: "1987-04-18",
+          dimissioni: "1987-04-28",
+          fine: "1987-07-29",
+        },
+        {
+          id: 45,
+          nome: "Gloria I",
+          legislatura: 10,
+          inizio: "1987-07-29",
+          dimissioni: "1988-03-11",
+          fine: "1988-04-13",
+        },
+        {
+          id: 46,
+          nome: "De Mita I",
+          legislatura: 10,
+          inizio: "1988-04-13",
+          dimissioni: "1989-05-19",
+          fine: "1989-07-23",
+        },
+        {
+          id: 47,
+          nome: "Andreotti VI",
+          legislatura: 10,
+          inizio: "1989-07-23",
+          dimissioni: "1991-03-29",
+          fine: "1991-04-13",
+        },
+        {
+          id: 48,
+          nome: "Andreotti VII",
+          legislatura: 10,
+          inizio: "1991-04-13",
+          dimissioni: "1992-04-24",
+          fine: "1992-06-28",
+        },
+        {
+          id: 49,
+          nome: "Amato I",
+          legislatura: 11,
+          inizio: "1992-06-28",
+          dimissioni: "1993-04-22",
+          fine: "1993-04-29",
+        },
+        {
+          id: 50,
+          nome: "Ciampi I",
+          legislatura: 11,
+          inizio: "1993-04-29",
+          dimissioni: "1994-01-13",
+          fine: "1994-05-11",
+        },
+        {
+          id: 51,
+          nome: "Berlusconi I",
+          legislatura: 12,
+          inizio: "1994-05-11",
+          dimissioni: "1994-12-22",
+          fine: "1995-01-17",
+        },
+        {
+          id: 51,
+          nome: "Berlusconi I",
+          legislatura: 12,
+          inizio: "1994-05-11",
+          dimissioni: "1994-12-22",
+          fine: "1995-01-17",
+        },
+        {
+          id: 52,
+          nome: "Dini I",
+          legislatura: 12,
+          inizio: "1995-01-17",
+          dimissioni: "1996-01-11",
+          fine: "1996-05-18",
+        },
+        {
+          id: 53,
+          nome: "Prodi I",
+          legislatura: 13,
+          inizio: "1996-05-18",
+          dimissioni: "1998-10-09",
+          fine: "1998-10-21",
+        },
+        {
+          id: 54,
+          nome: "D'Alema I",
+          legislatura: 13,
+          inizio: "1998-10-21",
+          dimissioni: "1999-12-18",
+          fine: "1999-12-22",
+        },
+        {
+          id: 55,
+          nome: "D'Alema II",
+          legislatura: 13,
+          inizio: "1999-12-22",
+          dimissioni: "2000-04-19",
+          fine: "2000-04-26",
+        },
+        {
+          id: 56,
+          nome: "Amato II",
+          legislatura: 13,
+          inizio: "2000-04-26",
+          dimissioni: "2001-05-31",
+          fine: "2001-06-11",
+        },
+        {
+          id: 57,
+          nome: "Berlusconi II",
+          legislatura: 14,
+          inizio: "2001-06-11",
+          dimissioni: "2005-04-20",
+          fine: "2005-04-23",
+        },
+        {
+          id: 58,
+          nome: "Berlusconi III",
+          legislatura: 14,
+          inizio: "2005-04-23",
+          dimissioni: "2006-05-02",
+          fine: "2006-05-17",
+        },
+        {
+          id: 59,
+          nome: "Prodi II",
+          legislatura: 15,
+          inizio: "2006-05-17",
+          dimissioni: "2008-01-24",
+          fine: "2008-05-08",
+        },
+        {
+          id: 60,
+          nome: "Berlusconi IV",
+          legislatura: 16,
+          inizio: "2008-05-08",
+          dimissioni: "2011-11-12",
+          fine: "2011-11-16",
+        },
+        {
+          id: 61,
+          nome: "Monti I",
+          legislatura: 16,
+          inizio: "2011-11-16",
+          dimissioni: "2012-12-21",
+          fine: "2013-04-28",
+        },
+        {
+          id: 62,
+          nome: "Letta I",
+          legislatura: 17,
+          inizio: "2013-04-28",
+          dimissioni: "2014-02-14",
+          fine: "2014-02-22",
+        },
+        {
+          id: 63,
+          nome: "Renzi I",
+          legislatura: 17,
+          inizio: "2014-02-22",
+          dimissioni: "2016-12-07",
+          fine: "2016-12-12",
+        },
+        {
+          id: 64,
+          nome: "Gentiloni I",
+          legislatura: 17,
+          inizio: "2016-12-12",
+          dimissioni: "2018-03-24",
+          fine: "2018-06-01",
+        },
+        {
+          id: 65,
+          nome: "Conte I",
+          legislatura: 18,
+          inizio: "2018-06-01",
+          dimissioni: "2019-08-20",
+          fine: "2019-09-05",
+        },
+        {
+          id: 66,
+          nome: "Conte II",
+          legislatura: 18,
+          inizio: "2019-09-05",
+          dimissioni: "2021-01-26",
+          fine: "2021-02-13",
+        },
+        {
+          id: 67,
+          nome: "Draghi I",
+          legislatura: 18,
+          inizio: "2021-02-13",
+          dimissioni: "2022-07-21",
+          fine: "2022-10-22",
+        },
+        {
+          id: 68,
+          nome: "Meloni I",
+          legislatura: 19,
+          inizio: "2022-10-22",
+          dimissioni: "",
+          fine: "",
+        },
+      ];
 
-                // Optional: redraw the chart. Add a title and set the width and height of the chart
-                var options = {
-                    title: 'Durata dei Governi Repubblicani in giorni',
-                    vAxis : {
-                        title: 'Durata (giorni)'
-                    },
-                    hAxis : {
-		                title : 'Gorverni',
-                        viewWindow : 10
-		            },
-                    width : 1500,
-                    legend : {position : 'right'}
-                };
+      var firstDayFirstRep = "1946-07-14";
+      var firstDaySecondRep = "1994-04-15";
+      //TODO add median mode
 
-                var chart = new google.visualization.LineChart(document.getElementById('linechart_div'));
+      //Setup data
+      var myHeader = [
+        "Nome",
+        "Legislatura",
+        "Giorni in carica",
+        "Giorni effettivi",
+        "Media complessiva dei giorni effettivi",
+        "Media nella Legislatura",
+        "Media repVersion",
+        "Media 20 anni",
+        "Media 10 anni",
+        "Giorni prorogatio",
+      ];
+      var avrgLegislatura = { value: 0, sum: 0, count: 0 };
+      myData = governments.map((gov) => [
+        gov.nome,
+        gov.legislatura,
+        daysBetween(gov.inizio, gov.dimissioni), //Giorni in carica
+        daysBetween(gov.inizio, gov.fine), //Giorni effettivi
+        daysBetween(firstDayFirstRep, gov.fine) / gov.id, //Media complessiva dei giorni effettivi
+        meanLegislatura(gov, governments), //Media effettivi nella Legislatura
+        meanRepVersion(gov, firstDayFirstRep, firstDaySecondRep), //Media repVersion XXX
+        mobileMean(20, gov, governments), //mobileMean20yr
+        mobileMean(10, gov, governments), //mobileMean10yr
+        daysBetween(gov.dimissioni, gov.fine), //Giorni prorogatio
+      ]);
+      // Draw the chart and set the chart values
+      function drawChart() {
+        const fullTableArray = [[...myHeader], ...myData];
+        var data = google.visualization.arrayToDataTable(fullTableArray);
 
-                chart.draw(data, options);
+        // Optional: redraw the chart. Add a title and set the width and height of the chart
+        var options = {
+          title: "Durata dei Governi Repubblicani in giorni",
+          vAxis: {
+            title: "Durata (giorni)",
+          },
+          hAxis: {
+            title: "Gorverni",
+            viewWindow: 10,
+          },
+          width: 1500,
+          legend: { position: "right" },
+        };
 
-                var showVal = new Object();
+        var chart = new google.visualization.LineChart(
+          document.getElementById("linechart_div")
+        );
 
-                // Select the series to show
-                document.getElementById("showAll").onclick = function() {
-                    showVal = new Object();
-                    view = data;
-                    chart.draw(view, options);
-                }
-                document.getElementById("showDays").onclick = function() {
-                    showVal[2] = false;
-                    dataSetup(showVal, data, chart, options);
-                }
-                document.getElementById("showDaysEff").onclick = function() {
-                    showVal[3] = false;
-                    dataSetup(showVal, data, chart, options);
-                }
-                document.getElementById("showAverageEff").onclick = function() {
-                    showVal[4] = false;
-                    dataSetup(showVal, data, chart, options);
-                }
-                document.getElementById("showAverageLeg").onclick = function() {
-                    showVal[5] = false;
-                    dataSetup(showVal, data, chart, options);
-                }
-                document.getElementById("showAverages").onclick = function() {
-                    showVal[4] = false;
-                    showVal[5] = false;
-                    showVal[6] = false;
-                    showVal[7] = false;
-                    dataSetup(showVal, data, chart, options);
-                }
-                // Select the series to hide
-                document.getElementById("hideLegislatura").onclick = function() {
-                    showVal[1] = true;
-                    dataSetup(showVal, data, chart, options);
-                }
-                document.getElementById("hideDays").onclick = function() {
-                    showVal[2] = true;
-                    dataSetup(showVal, data, chart, options);
-                }
-                document.getElementById("hideDaysEff").onclick = function() {
-                    showVal[3] = true;
-                    dataSetup(showVal, data, chart, options);
-                }
-                document.getElementById("hideAverageEff").onclick = function() {
-                    showVal[4] = true;
-                    dataSetup(showVal, data, chart, options);
-                }
-                document.getElementById("hideAverageLeg").onclick = function() {
-                    showVal[5] = true;
-                    dataSetup(showVal, data, chart, options);
-                }
-                document.getElementById("hideAverages").onclick = function() {
-                    showVal[4] = true;
-                    showVal[5] = true;
-                    showVal[6] = true;
-                    showVal[7] = true;
-                    dataSetup(showVal, data, chart, options);
-                }
+        chart.draw(data, options);
 
-            }
-            function dataSetup(showVal, data, chart, options) {
-                var hideArray = new Array();
-                for (const key in showVal) {
-                    if (showVal[key]) {
-                        hideArray.push(parseInt(key));
-                    }
-                }
-                view = new google.visualization.DataView(data);
-                console.log(hideArray);
-                view.hideColumns(hideArray);
-                chart.draw(view, options);
-            }
-        </script>
-    </head>
-    <body>
-        <!-- Chart --->
-        <div id="linechart_div" style="width: 900px; height: 500px"></div>
-        
-        <!-- Button for series selection -->
-        <table>
-            <tbody>
-                <tr>
-                    <td colspan="4">Rimuovi</td>
-                </tr>
-                <tr>
-                    <td><button type="button" id="hideLegislatura">Legislatura</button></td>
-                    <td><button type="button" id="hideDays">Giorni in carica</button></td>
-                    <td><button type="button" id="hideDaysEff">Giorni effettivi</button></td>
-                    <td><button type="button" id="hideAverageEff">Media effettivi</button></td>
-                    <td><button type="button" id="hideAverageLeg">Media Legislatura</button></td>
-                    <td><button type="button" id="hideAverages">Medie</button></td>
-                </tr>
-                <tr>
-                    <td colspan="4">Ripristina</td>
-                </tr>
-                <tr>
-                    <td><button type="button" id="showAll">Tutto</button></td>
-                    <td><button type="button" id="showDays">Giorni in carica</button></td>
-                    <td><button type="button" id="showDaysEff">Giorni effettivi</button></td>
-                    <td><button type="button" id="showAverageEff">Media effettivi</button></td>
-                    <td><button type="button" id="showAverageLeg">Media Legislatura</button></td>
-                    <td><button type="button" id="showAverages">Medie</button></td>
-                </tr>
-            </tbody>
-        </table>
-    </body>
+        var showVal = new Object();
+
+        // Select the series to show
+        document.getElementById("showAll").onclick = function () {
+          showVal = new Object();
+          view = data;
+          chart.draw(view, options);
+        };
+        document.getElementById("showDays").onclick = function () {
+          showVal[2] = false;
+          dataSetup(showVal, data, chart, options);
+        };
+        document.getElementById("showDaysEff").onclick = function () {
+          showVal[3] = false;
+          dataSetup(showVal, data, chart, options);
+        };
+        document.getElementById("showAverageEff").onclick = function () {
+          showVal[4] = false;
+          dataSetup(showVal, data, chart, options);
+        };
+        document.getElementById("showAverageLeg").onclick = function () {
+          showVal[5] = false;
+          dataSetup(showVal, data, chart, options);
+        };
+        document.getElementById("showAverages").onclick = function () {
+          showVal[4] = false;
+          showVal[5] = false;
+          showVal[6] = false;
+          showVal[7] = false;
+          dataSetup(showVal, data, chart, options);
+        };
+        // Select the series to hide
+        document.getElementById("hideLegislatura").onclick = function () {
+          showVal[1] = true;
+          dataSetup(showVal, data, chart, options);
+        };
+        document.getElementById("hideDays").onclick = function () {
+          showVal[2] = true;
+          dataSetup(showVal, data, chart, options);
+        };
+        document.getElementById("hideDaysEff").onclick = function () {
+          showVal[3] = true;
+          dataSetup(showVal, data, chart, options);
+        };
+        document.getElementById("hideAverageEff").onclick = function () {
+          showVal[4] = true;
+          dataSetup(showVal, data, chart, options);
+        };
+        document.getElementById("hideAverageLeg").onclick = function () {
+          showVal[5] = true;
+          dataSetup(showVal, data, chart, options);
+        };
+        document.getElementById("hideAverages").onclick = function () {
+          showVal[4] = true;
+          showVal[5] = true;
+          showVal[6] = true;
+          showVal[7] = true;
+          dataSetup(showVal, data, chart, options);
+        };
+      }
+      function dataSetup(showVal, data, chart, options) {
+        var hideArray = new Array();
+        for (const key in showVal) {
+          if (showVal[key]) {
+            hideArray.push(parseInt(key));
+          }
+        }
+        view = new google.visualization.DataView(data);
+        console.log(hideArray);
+        view.hideColumns(hideArray);
+        chart.draw(view, options);
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Chart --->
+    <div id="linechart_div" style="width: 900px; height: 500px"></div>
+
+    <!-- Button for series selection -->
+    <table>
+      <tbody>
+        <tr>
+          <td colspan="4">Rimuovi</td>
+        </tr>
+        <tr>
+          <td>
+            <button type="button" id="hideLegislatura">Legislatura</button>
+          </td>
+          <td><button type="button" id="hideDays">Giorni in carica</button></td>
+          <td>
+            <button type="button" id="hideDaysEff">Giorni effettivi</button>
+          </td>
+          <td>
+            <button type="button" id="hideAverageEff">Media effettivi</button>
+          </td>
+          <td>
+            <button type="button" id="hideAverageLeg">Media Legislatura</button>
+          </td>
+          <td><button type="button" id="hideAverages">Medie</button></td>
+        </tr>
+        <tr>
+          <td colspan="4">Ripristina</td>
+        </tr>
+        <tr>
+          <td><button type="button" id="showAll">Tutto</button></td>
+          <td><button type="button" id="showDays">Giorni in carica</button></td>
+          <td>
+            <button type="button" id="showDaysEff">Giorni effettivi</button>
+          </td>
+          <td>
+            <button type="button" id="showAverageEff">Media effettivi</button>
+          </td>
+          <td>
+            <button type="button" id="showAverageLeg">Media Legislatura</button>
+          </td>
+          <td><button type="button" id="showAverages">Medie</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
 </html>
