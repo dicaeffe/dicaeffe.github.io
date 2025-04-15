@@ -1,4 +1,5 @@
 # dicaeffe.github.io
+
 My Github pages repository. Just a POC.
 
 ![GitHub](https://img.shields.io/github/license/dicaeffe/cv)
@@ -7,6 +8,12 @@ My Github pages repository. Just a POC.
 
 ## Notes area
 
-* [Pagina template](template.md)
-* [Prova grafici](poc_chart.html)
-* [Grafici governi](gov_chart.html): durata media di un governo nel tempo.
+- [Pagina template](template.md)
+- [Prova grafici](poc_chart.html)
+- [Grafici governi](gov_chart.html): durata media di un governo nel tempo.
+
+# Dev
+
+- Edit files in the docs directory
+- Run `bundle install`
+-
