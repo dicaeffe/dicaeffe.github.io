@@ -26,11 +26,19 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: dicaeffe
 github_username: dicaeffe
+instagram_username: dicaeffe
+linkedin_username: dicaeffe
+motto: Why would anyone do it if you are not willing to do it?
+
+mastodon:
+  - username: dicaeffe@mastodon.uno
+    instance: mastodon.uno
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+  - jemoji
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

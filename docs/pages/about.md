@@ -1,4 +1,10 @@
-[🇮🇹](#italian) - [🇬🇧](#english)
+---
+layout: page
+title: About
+permalink: /about/
+---
+
+[:it: italiano](#italian) - [:gb: english](#english)
 
 # English
 
@@ -16,7 +22,7 @@ I work every day to find solutions that adapt to business needs, that are mainta
 
 The love for the beauty of solutions that solve problems in an elegant way is a legacy of my physics-scientific studies.
 
-The work _industry_ requires attention to ISO, ETSI and UNI standards for compliance with national and European regulations: I have always found admirable the utopian human struggle against entropy in the effort to standardize in order to achieve simplification.
+The work _industry_ requires me to pay attention to ISO, ETSI and UNI standards for compliance with :it: national and :eu: European regulations: I have always found admirable the utopian human struggle against entropy in the effort to standardize in order to achieve simplification.
 
 I like working in a group and I love to maintain an open and interdisciplinary curiosity towards everything that surrounds me: this encourages me to train lateral thinking and to find new stimuli and motivations.
 
@@ -55,7 +61,7 @@ Lavoro ogni giorno per trovare soluzioni che si adattino alle esigenze aziendali
 
 L'amore per la bellezza delle soluzioni che risolvono problemi in modo elegante è un'eredità dei miei studi fisico-scientifici.
 
-L'_industry_ di lavoro impone anche l'attenzione verso standard ISO, ETSI e UNI per la conformità alle normative nazionali ed europee: ho sempre trovato ammirevole l'utopica lotta umana contro l'entropia nello sforzo di uniformare per raggiungere la semplificazione.
+L'_industry_ di lavoro mi impone di porre attenzione verso standard ISO, ETSI e UNI per la conformità alle normative :it: nazionali ed :eu: europee: ho sempre trovato ammirevole l'utopica lotta umana contro l'entropia nello sforzo di uniformare per raggiungere la semplificazione.
 
 Mi piace lavorare in gruppo e amo mantenere una curiosità aperta e interdisciplinare verso tutto ciò che mi circonda: questo mi incoraggia ad allenare il pensiero laterale ed a trovare nuovi stimoli e motivazioni.
 

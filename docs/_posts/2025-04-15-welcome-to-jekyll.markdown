@@ -23,22 +23,64 @@ I am using the excuse of a personal site to explore the Jekyll opportunity to be
 
 {:toc}
 
-# The first paragraph
+# h1
 
-## A sub-paragraph
+## h2
 
 This is a descriptive line
 
 # Another paragraph
 
 - bullet
+  - bullet
+- bullet
 
+* bullet
+  - bullet
 * bullet
 
 1. list
+   1. list
 1. list
-1. list
+
+## Table
 
 | A   |  B  |   C |
 | :-- | :-: | --: |
 | 1   |  2  |   3 |
+
+# Mermaid
+
+```mermaid
+flowchart TD
+    A[Christmas] -->|Get money| B(Go shopping)
+    B --> C{Let me think}
+    C -->|One| D[Laptop]
+    C -->|Two| E[iPhone]
+    C -->|Three| F[fa:fa-car Car]
+```
+
+```mermaid
+stateDiagram-v2
+    [*] --> Still
+    Still --> [*]
+    Still --> Moving
+    Moving --> Still
+    Moving --> Crash
+    Crash --> [*]
+```
+
+```mermaid
+sequenceDiagram
+    Alice->>+John: Hello John, how are you?
+    Alice->>+John: John, can you hear me?
+    John-->>-Alice: Hi Alice, I can hear you!
+    John-->>-Alice: I feel great!
+```
+
+```mermaid!
+pie title Pets adopted by volunteers
+  "Dogs" : 386
+  "Cats" : 85
+  "Rats" : 35
+```

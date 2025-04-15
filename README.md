@@ -41,3 +41,14 @@ Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most ou
 [jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]: https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
+
+# Issues
+
+If you get `You have already activated X, but your Gemfile requires Y` error message, then solve with:
+
+- `bundle clean --force`
+
+# Theme
+
+- You can override theme's setting by creating the html files in the `docs/_layouts` directory.
+- if you want to see the theme's default files use the command `bundle info --path minima` (where _minima_ is the name of the theme)
