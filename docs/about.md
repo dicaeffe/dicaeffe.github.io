@@ -1,5 +1,4 @@
-- [🇮🇹](#italian)
-- [🇬🇧](#english)
+[🇮🇹](#italian) - [🇬🇧](#english)
 
 # English
 
